@@ -20,12 +20,12 @@ from rest_framework.routers import DefaultRouter
 from api.views import EmployeeViewSet, DepartmentViewSet
 
 router = DefaultRouter()
-router.register(r'employee', EmployeeViewSet)
-router.register(r'department', DepartmentViewSet)
+router.register(r'employees', EmployeeViewSet)
+router.register(r'departments', DepartmentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('employee/', include('api.urls')),
-    path('department/', include('api.urls')),
+    path('employees/', include('api.urls')),
+    path('departments/', include('api.urls')),
 ]
